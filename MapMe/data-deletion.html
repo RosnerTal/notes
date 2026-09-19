@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Deletion Request - MapMe</title>
+  <meta name="description" content="Step-by-step instructions on how to request the deletion of your account and personal data from MapMe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b111e;
+      --card-bg: #131d31;
+      --card-border: rgba(56, 189, 248, 0.2);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent-cyan: #00e5ff;
+      --accent-purple: #8b5cf6;
+      --accent-emerald: #10b981;
+      --accent-coral: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: rgba(19, 29, 49, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent-cyan);
+    }
+
+    .hero {
+      background: radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.12) 0%, transparent 60%);
+      padding: 3.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-coral));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero .meta {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.5rem;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #cbd5e1;
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .step-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .highlight-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box.emerald {
+      background: rgba(16, 185, 129, 0.08);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .highlight-box strong {
+      color: #fff;
+    }
+
+    .btn-action {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-coral), #b91c1c);
+      color: #fff;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 0.75rem;
+      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+      text-decoration: none;
+    }
+
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--accent-cyan);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">📍</div>
+        <span>MapMe</span>
+      </a>
+      <nav class="nav-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="data-deletion.html" class="active">Data Deletion</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Account & Data Deletion</h1>
+    <div class="meta">
+      <strong>Application:</strong> MapMe (<code>com.talapp.mapme</code>)<br>
+      <strong>Developer:</strong> Tal Rosner | <strong>Compliance:</strong> Google Play Data Safety Policy
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="card">
+      <p>
+        At <strong>MapMe</strong>, you have complete ownership and control over your personal data.
+        In compliance with Google Play's User Data & Data Safety requirements, this page provides instructions on how you can
+        delete individual records or request the permanent deletion of your account and all associated cloud data.
+      </p>
+
+      <h2>1. How to Delete Your Data</h2>
+      <p>You can delete your data using either of the two methods below:</p>
+
+      <div class="step-box">
+        <h3>Option A: In-App Track Deletion (Immediate)</h3>
+        <p>If you only want to remove specific exploration tracks or clear local history without deleting your entire account:</p>
+        <ol>
+          <li>Open the <strong>MapMe</strong> app on your Android device.</li>
+          <li>On the <strong>Dashboard</strong>, scroll to the <strong>Travel History</strong> list.</li>
+          <li>Tap on the trip you wish to remove to open its <strong>Detail View</strong>.</li>
+          <li>Tap the <strong>Delete Track</strong> icon (trash can) in the upper-right corner and confirm deletion.</li>
+          <li>The track, its coordinates, distance metrics, and associated points of interest will be deleted immediately from both your local device and cloud sync.</li>
+        </ol>
+      </div>
+
+      <div class="step-box">
+        <h3>Option B: Complete Account & Cloud Data Erasure Request (Web / Email)</h3>
+        <p>
+          If you wish to completely erase your Google account linkage, user profile, and all synchronized tracks from MapMe servers
+          (including if you have uninstalled the app):
+        </p>
+        <ol>
+          <li>
+            Send an email to developer <strong>Tal Rosner</strong> at:
+            <a href="mailto:talrosner@gmail.com?subject=MapMe%20Data%20Deletion%20Request&body=Hello%2C%0A%0APlease%20permanently%20delete%20my%20MapMe%20account%20and%20all%20associated%20data.%0A%0ARegistered%20Google%20Account%20Email%3A%20%5BYour%20Email%20Here%5D%0A%0AThank%20you.">
+              <strong>talrosner@gmail.com</strong>
+            </a>
+          </li>
+          <li>
+            Use the subject line: <code>MapMe Data Deletion Request</code>.
+          </li>
+          <li>
+            In the body of the email, include the <strong>Google account email address</strong> associated with your MapMe profile.
+          </li>
+          <li>
+            You will receive a confirmation email once your request is received.
+          </li>
+        </ol>
+
+        <a class="btn-action" href="mailto:talrosner@gmail.com?subject=MapMe%20Data%20Deletion%20Request&body=Hello%2C%0A%0APlease%20permanently%20delete%20my%20MapMe%20account%20and%20all%20associated%20data.%0A%0ARegistered%20Google%20Account%20Email%3A%20%5BYour%20Email%20Here%5D%0A%0AThank%20you.">
+          ✉️ Request Data Deletion via Email
+        </a>
+      </div>
+
+      <h2>2. What Data Is Deleted</h2>
+      <p>Upon processing an account deletion request, the following data is permanently purged:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Specific Data Elements</th>
+            <th>Deletion Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>User Profile</strong></td>
+            <td>Google account email, display name, photo URL, and Firebase Auth UID</td>
+            <td>Permanently deleted from Firebase Authentication</td>
+          </tr>
+          <tr>
+            <td><strong>Exploration Tracks</strong></td>
+            <td>All recorded walking, running, and driving sessions (distances, durations, speeds, timestamps)</td>
+            <td>Permanently purged from Cloud Firestore</td>
+          </tr>
+          <tr>
+            <td><strong>GPS Waypoints</strong></td>
+            <td>All geographical coordinate breadcrumbs (latitude, longitude, altitude)</td>
+            <td>Permanently purged from Cloud Firestore</td>
+          </tr>
+          <tr>
+            <td><strong>Points of Interest (POIs)</strong></td>
+            <td>Custom waypoint markers, descriptions, notes, and attached photos</td>
+            <td>Permanently purged from cloud storage and Firestore</td>
+          </tr>
+          <tr>
+            <td><strong>Aggregated Statistics</strong></td>
+            <td>Total lifetime distances, track counts, and weekly activity chart entries</td>
+            <td>Permanently deleted</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Data Retention and Timeline</h2>
+      <div class="highlight-box emerald">
+        <strong>Timeline & Retention:</strong><br>
+        <ul>
+          <li><strong>Processing Time:</strong> All deletion requests submitted via email are processed within <strong>30 days</strong> of verification.</li>
+          <li><strong>Data Retention Post-Deletion:</strong> <strong>Zero.</strong> Once deleted, no backups or personal data of any kind are retained on our servers.</li>
+          <li><strong>Guest / Anonymous Users:</strong> Guest sessions store data primarily on the local device sandbox. Uninstalling the app or clearing the app storage in Android Settings immediately erases all guest data.</li>
+        </ul>
+      </div>
+
+      <h2>4. Revoking Google Account Permissions</h2>
+      <p>
+        If you signed in with your Google account, you can also disconnect MapMe's access directly from your Google Security Settings at any time:
+      </p>
+      <ol>
+        <li>Go to your <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">Google Account Third-Party Connections</a> page.</li>
+        <li>Locate <strong>MapMe</strong> in the list of connected apps.</li>
+        <li>Click <strong>Delete all connections that you have with MapMe</strong>.</li>
+      </ol>
+
+      <h2>5. Contact Information</h2>
+      <p>
+        If you need assistance or have questions regarding data deletion, please contact:
+      </p>
+      <ul>
+        <li><strong>Developer:</strong> Tal Rosner</li>
+        <li><strong>Email:</strong> <a href="mailto:talrosner@gmail.com">talrosner@gmail.com</a></li>
+        <li><strong>App Privacy Policy:</strong> <a href="privacy-policy.html">Privacy Policy Page</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MapMe by Tal Rosner. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="privacy-policy.html">Privacy Policy</a> &bull;
+      <a href="data-deletion.html">Data Deletion Instructions</a>
+    </p>
+  </footer>
+
+</body>
+</html>

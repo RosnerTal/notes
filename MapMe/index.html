@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MapMe - Privacy & Legal Compliance</title>
+  <meta name="description" content="MapMe Google Play compliance documents: Privacy Policy and Data Deletion Instructions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b111e;
+      --card-bg: #131d31;
+      --card-border: rgba(56, 189, 248, 0.2);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent-cyan: #00e5ff;
+      --accent-purple: #8b5cf6;
+      --accent-emerald: #10b981;
+      --accent-coral: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(19, 29, 49, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.35);
+    }
+
+    .version-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      background: rgba(0, 229, 255, 0.15);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      border-radius: 6px;
+      color: var(--accent-cyan);
+    }
+
+    .hero {
+      background: radial-gradient(circle at 50% 10%, rgba(0, 229, 255, 0.15) 0%, rgba(139, 92, 246, 0.08) 35%, transparent 70%);
+      padding: 4.5rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 4rem;
+      flex: 1;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .action-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .action-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 12px 30px rgba(0, 229, 255, 0.15);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-icon.cyan {
+      background: rgba(0, 229, 255, 0.15);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+    }
+
+    .card-icon.coral {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .action-card h2 {
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .action-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--accent-cyan);
+    }
+
+    .action-card:hover .action-link {
+      gap: 0.7rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">📍</div>
+        <span>MapMe</span>
+        <span class="version-badge">v4.8</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>MapMe Legal & Privacy Portal</h1>
+    <p>Official Google Play Store compliance documents and policies for the MapMe Android & Android Auto application.</p>
+  </section>
+
+  <main class="container">
+    <div class="cards-grid">
+      <a href="privacy-policy.html" class="action-card">
+        <div>
+          <div class="card-icon cyan">🔒</div>
+          <h2>Privacy Policy</h2>
+          <p>
+            Detailed information on our transparent data practices, precise and background location usage,
+            cloud synchronization via Firebase, and your privacy guarantees.
+          </p>
+        </div>
+        <span class="action-link">Read Privacy Policy &rarr;</span>
+      </a>
+
+      <a href="data-deletion.html" class="action-card">
+        <div>
+          <div class="card-icon coral">🗑️</div>
+          <h2>Data Deletion Request</h2>
+          <p>
+            Step-by-step instructions on how to delete individual exploration tracks in-app, or request permanent
+            erasure of your account and all associated cloud data.
+          </p>
+        </div>
+        <span class="action-link">View Deletion Instructions &rarr;</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MapMe by Tal Rosner &bull; Developer Contact: <a href="mailto:talrosner@gmail.com">talrosner@gmail.com</a></p>
+    <p style="margin-top: 0.5rem;"><a href="https://github.com/RosnerTal/MapMe" target="_blank" rel="noopener">GitHub: RosnerTal/MapMe</a></p>
+  </footer>
+
+</body>
+</html>
